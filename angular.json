@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular_projekt": {
+    "Test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular_projekt",
+            "outputPath": "dist/test",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,12 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular_projekt:build:production"
+              "buildTarget": "Test:build:production"
             },
             "development": {
-              "buildTarget": "angular_projekt:build:development"
+              "buildTarget": "Test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular_projekt:build"
+            "buildTarget": "Test:build"
           }
         },
         "test": {
@@ -104,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "d08a31c4-3a95-4614-98ea-e5e8c2dd9a36"
+    "analytics": "a5a39ff5-53f2-455a-b29f-8a0d65a2514f"
   }
 }
