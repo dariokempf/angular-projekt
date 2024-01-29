@@ -34,9 +34,9 @@ jobs:
       - name: Build
         run: npm run build -- -c production --base-href "https://dariokempf.github.io/angular-projekt/"
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: dist/test/browser
   
   deploy:
     needs: build
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
