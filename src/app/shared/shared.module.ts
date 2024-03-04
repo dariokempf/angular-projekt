@@ -8,7 +8,11 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     NgbAlertModule
   ],
-  declarations: [ExampleAComponent],
-  exports:  [ExampleAComponent],
+  declarations: [
+    ExampleAComponent
+  ],
+  exports: [
+    ExampleAComponent
+  ]
 })
 export class SharedModule { }
