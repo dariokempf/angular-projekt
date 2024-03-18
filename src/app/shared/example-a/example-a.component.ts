@@ -11,11 +11,13 @@ export class ExampleAComponent implements OnInit {
   jumpStrength: number = 10; // Jump strength
   gameSpeed: number = 10; // Game speed
   isJumping: boolean = false; // Flag to track if the bird is jumping
+  obstacles: any[] = []; // Array to store obstacles
 
   constructor() { }
 
   ngOnInit(): void {
     this.startGame();
+    this.generateObstacles();
   }
 
   startGame() {
@@ -41,5 +43,17 @@ export class ExampleAComponent implements OnInit {
   @HostListener('window:keydown.space')
   onSpaceBarPress() {
     this.jump();
+  }
+
+  generateObstacles() {
+    console.log("Generating obstacles...");
+    setInterval(() => {
+      // Generate a new obstacle and add it to the array
+      this.obstacles.push({
+        top: Math.random() * 300, // Random height
+        left: 400 // Starting position outside the game area
+      });
+      console.log("Obstacle generated:", this.obstacles);
+    }, 2000); // Interval for generating new obstacles (in milliseconds)
   }
 }

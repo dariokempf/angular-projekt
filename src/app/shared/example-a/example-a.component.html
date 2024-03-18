@@ -1,3 +1,17 @@
-<div class="game-container" (click)="jump()">
-  <div class="bird" [style.bottom.px]="birdPosition"></div>
+<div class="container">
+  <nav class="navigation">
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/game">Spielseite</a></li>
+      <!-- Weitere Links hier -->
+    </ul>
+  </nav>
+
+  <div class="game-container" (click)="jump()">
+    <div class="bird" [style.bottom.px]="birdPosition"></div>
+    <!-- Display obstacles -->
+   <!-- Überprüfe die korrekte Verwendung des *ngFor-Direktivs -->
+<div *ngFor="let obstacle of obstacles" class="obstacle"
+[style.top.px]="obstacle.top" [style.left.px]="obstacle.left"></div>
+
 </div>

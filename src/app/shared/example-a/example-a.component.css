@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% der Bildschirmhöhe */
+}
+
 .game-container {
   position: relative;
   width: 400px;
@@ -13,4 +20,40 @@
   width: 50px;
   height: 50px;
   background-color: yellow;
+}
+
+.obstacle {
+  position: absolute;
+  width: 50px;
+  height: 200px; /* Height of the obstacle */
+  background-color: green;
+  /* Other stylings like border, shadow, etc. */
+}
+
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-decoration: none;
 }
