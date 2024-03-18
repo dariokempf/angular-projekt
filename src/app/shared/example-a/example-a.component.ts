@@ -7,8 +7,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class ExampleAComponent implements OnInit {
   birdPosition: number = 250; // Initial position of the bird
-  gravity: number = 0.5; // Gravity force
-  jumpStrength: number = 10; // Jump strength
+  gravity: number = 3; // Gravity force
+  jumpStrength: number = 100; // Jump strength
   gameSpeed: number = 10; // Game speed
   isJumping: boolean = false; // Flag to track if the bird is jumping
   obstacles: any[] = []; // Array to store obstacles

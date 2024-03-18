@@ -1,11 +1,23 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; /* 100% der Bildschirmhöhe */
 }
 
+.h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titel {
+  background-color: gray;
+  height: 10vh;
+  width: 148.1%;
+}
+
 .game-container {
+  margin-top: 10px;
   position: relative;
   width: 400px;
   height: 500px;
@@ -16,7 +28,9 @@
 
 .bird {
   position: absolute;
-  left: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
   width: 50px;
   height: 50px;
   background-color: yellow;
@@ -24,12 +38,12 @@
 
 .obstacle {
   position: absolute;
+  bottom: 0;
   width: 50px;
-  height: 200px; /* Height of the obstacle */
+  height: 200px;
   background-color: green;
-  /* Other stylings like border, shadow, etc. */
+  z-index: 1;
 }
-
 
 .navigation {
   position: fixed;

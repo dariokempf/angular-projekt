@@ -6,12 +6,15 @@
       <!-- Weitere Links hier -->
     </ul>
   </nav>
+  
+  <div class="titel">
+    <h1>Flappy Bird</h1>
+  </div>
 
   <div class="game-container" (click)="jump()">
     <div class="bird" [style.bottom.px]="birdPosition"></div>
     <!-- Display obstacles -->
-   <!-- Überprüfe die korrekte Verwendung des *ngFor-Direktivs -->
-<div *ngFor="let obstacle of obstacles" class="obstacle"
-[style.top.px]="obstacle.top" [style.left.px]="obstacle.left"></div>
-
+    <div *ngFor="let obstacle of obstacles" class="obstacle"
+         [style.top.px]="obstacle.top" [style.left.px]="obstacle.left"></div>
+  </div>
 </div>
